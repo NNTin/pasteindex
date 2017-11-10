@@ -6,7 +6,7 @@ const pasteSchema = new Schema({
     ref: 'User',
     required: true
   },
-  id: {
+  pasteid: {
     type: String
   },
   order: {
@@ -28,7 +28,7 @@ pasteSchema.methods = {
       // simple view
       id: this.id,
       user: this.user.view(full),
-      id: this.id,
+      pasteid: this.pasteid,
       order: this.order,
       name: this.name,
       category: this.category,

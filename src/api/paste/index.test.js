@@ -22,10 +22,10 @@ beforeEach(async () => {
 test('POST /pastes 201 (user)', async () => {
   const { status, body } = await request(app())
     .post('/')
-    .send({ access_token: userSession, id: 'test', order: 'test', name: 'test', category: 'test' })
+    .send({ access_token: userSession, pasteid: 'test', order: 'test', name: 'test', category: 'test' })
   expect(status).toBe(201)
   expect(typeof body).toEqual('object')
-  expect(body.id).toEqual('test')
+  expect(body.pasteid).toEqual('test')
   expect(body.order).toEqual('test')
   expect(body.name).toEqual('test')
   expect(body.category).toEqual('test')
@@ -62,11 +62,11 @@ test('GET /pastes/:id 404', async () => {
 test('PUT /pastes/:id 200 (user)', async () => {
   const { status, body } = await request(app())
     .put(`/${paste.id}`)
-    .send({ access_token: userSession, id: 'test', order: 'test', name: 'test', category: 'test' })
+    .send({ access_token: userSession, pasteid: 'test', order: 'test', name: 'test', category: 'test' })
   expect(status).toBe(200)
   expect(typeof body).toEqual('object')
   expect(body.id).toEqual(paste.id)
-  expect(body.id).toEqual('test')
+  expect(body.pasteid).toEqual('test')
   expect(body.order).toEqual('test')
   expect(body.name).toEqual('test')
   expect(body.category).toEqual('test')
@@ -76,7 +76,7 @@ test('PUT /pastes/:id 200 (user)', async () => {
 test('PUT /pastes/:id 401 (user) - another user', async () => {
   const { status } = await request(app())
     .put(`/${paste.id}`)
-    .send({ access_token: anotherSession, id: 'test', order: 'test', name: 'test', category: 'test' })
+    .send({ access_token: anotherSession, pasteid: 'test', order: 'test', name: 'test', category: 'test' })
   expect(status).toBe(401)
 })
 
@@ -89,7 +89,7 @@ test('PUT /pastes/:id 401', async () => {
 test('PUT /pastes/:id 404 (user)', async () => {
   const { status } = await request(app())
     .put('/123456789098765432123456')
-    .send({ access_token: anotherSession, id: 'test', order: 'test', name: 'test', category: 'test' })
+    .send({ access_token: anotherSession, pasteid: 'test', order: 'test', name: 'test', category: 'test' })
   expect(status).toBe(404)
 })
 

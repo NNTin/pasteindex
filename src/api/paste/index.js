@@ -7,7 +7,7 @@ import { schema } from './model'
 export Paste, { schema } from './model'
 
 const router = new Router()
-const { id, order, name, category } = schema.tree
+const { pasteid, order, name, category } = schema.tree
 
 /**
  * @api {post} /pastes Create paste
@@ -15,7 +15,7 @@ const { id, order, name, category } = schema.tree
  * @apiGroup Paste
  * @apiPermission user
  * @apiParam {String} access_token user access token.
- * @apiParam id Paste's id.
+ * @apiParam pasteid Paste's pasteid.
  * @apiParam order Paste's order.
  * @apiParam name Paste's name.
  * @apiParam category Paste's category.
@@ -26,7 +26,7 @@ const { id, order, name, category } = schema.tree
  */
 router.post('/',
   token({ required: true }),
-  body({ id, order, name, category }),
+  body({ pasteid, order, name, category }),
   create)
 
 /**
@@ -58,7 +58,7 @@ router.get('/:id',
  * @apiGroup Paste
  * @apiPermission user
  * @apiParam {String} access_token user access token.
- * @apiParam id Paste's id.
+ * @apiParam pasteid Paste's pasteid.
  * @apiParam order Paste's order.
  * @apiParam name Paste's name.
  * @apiParam category Paste's category.
@@ -69,7 +69,7 @@ router.get('/:id',
  */
 router.put('/:id',
   token({ required: true }),
-  body({ id, order, name, category }),
+  body({ pasteid, order, name, category }),
   update)
 
 /**

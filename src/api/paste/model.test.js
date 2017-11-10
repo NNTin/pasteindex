@@ -5,7 +5,7 @@ let user, paste
 
 beforeEach(async () => {
   user = await User.create({ email: 'a@a.com', password: '123456' })
-  paste = await Paste.create({ user, id: 'test', order: 'test', name: 'test', category: 'test' })
+  paste = await Paste.create({ user, pasteid: 'test', order: 'test', name: 'test', category: 'test' })
 })
 
 describe('view', () => {
@@ -15,7 +15,7 @@ describe('view', () => {
     expect(view.id).toBe(paste.id)
     expect(typeof view.user).toBe('object')
     expect(view.user.id).toBe(user.id)
-    expect(view.id).toBe(paste.id)
+    expect(view.pasteid).toBe(paste.pasteid)
     expect(view.order).toBe(paste.order)
     expect(view.name).toBe(paste.name)
     expect(view.category).toBe(paste.category)
@@ -29,7 +29,7 @@ describe('view', () => {
     expect(view.id).toBe(paste.id)
     expect(typeof view.user).toBe('object')
     expect(view.user.id).toBe(user.id)
-    expect(view.id).toBe(paste.id)
+    expect(view.pasteid).toBe(paste.pasteid)
     expect(view.order).toBe(paste.order)
     expect(view.name).toBe(paste.name)
     expect(view.category).toBe(paste.category)
