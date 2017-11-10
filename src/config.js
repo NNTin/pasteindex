@@ -37,7 +37,7 @@ const config = {
   },
   test: {
     mongo: {
-      uri: 'mongodb://heroku_hjls5v3w:mhodjgco6nknni0lefjbgvvagk@ds155325.mlab.com:55325/heroku_hjls5v3w',
+      uri: 'mongodb://heroku_50fttbhm:5k5n5hisgd6uciq0qtaiu0bbm9@ds257495.mlab.com:57495/heroku_50fttbhm',
       //uri: 'mongodb://localhost/test-test',
       options: {
         debug: false
@@ -46,7 +46,7 @@ const config = {
   },
   development: {
     mongo: {
-      uri: 'mongodb://heroku_hjls5v3w:mhodjgco6nknni0lefjbgvvagk@ds155325.mlab.com:55325/heroku_hjls5v3w',
+      uri: 'mongodb://heroku_50fttbhm:5k5n5hisgd6uciq0qtaiu0bbm9@ds257495.mlab.com:57495/heroku_50fttbhm',
       //uri: 'mongodb://localhost/test-test',
       options: {
         debug: true
@@ -58,7 +58,7 @@ const config = {
     port: process.env.PORT || 8080,
     mongo: {
       //uri: process.env.MONGODB_URI || 'mongodb://localhost/test'
-      uri: process.env.MONGODB_URI || 'mongodb://heroku_hjls5v3w:mhodjgco6nknni0lefjbgvvagk@ds155325.mlab.com:55325/heroku_hjls5v3w'
+      uri: process.env.MONGODB_URI || 'mongodb://heroku_50fttbhm:5k5n5hisgd6uciq0qtaiu0bbm9@ds257495.mlab.com:57495/heroku_50fttbhm'
     }
   }
 }
