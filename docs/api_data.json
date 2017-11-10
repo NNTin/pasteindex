@@ -155,8 +155,8 @@
           {
             "group": "Parameter",
             "optional": false,
-            "field": "id",
-            "description": "<p>Paste's id.</p>"
+            "field": "pasteid",
+            "description": "<p>Paste's pasteid.</p>"
           },
           {
             "group": "Parameter",
@@ -431,8 +431,8 @@
           {
             "group": "Parameter",
             "optional": false,
-            "field": "id",
-            "description": "<p>Paste's id.</p>"
+            "field": "pasteid",
+            "description": "<p>Paste's pasteid.</p>"
           },
           {
             "group": "Parameter",

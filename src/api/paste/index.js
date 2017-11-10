@@ -38,7 +38,7 @@ router.post('/',
  * @apiError {Object} 400 Some parameters may contain invalid values.
  */
 router.get('/',
-  query(),
+  query({ limit: { max: 7000 } }),
   index)
 
 /**

@@ -71,7 +71,7 @@
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | access_token			| String			|  <p>user access token.</p>							|
-| id			| 			|  <p>Paste's id.</p>							|
+| pasteid			| 			|  <p>Paste's pasteid.</p>							|
 | order			| 			|  <p>Paste's order.</p>							|
 | name			| 			|  <p>Paste's name.</p>							|
 | category			| 			|  <p>Paste's category.</p>							|
@@ -125,7 +125,7 @@
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | access_token			| String			|  <p>user access token.</p>							|
-| id			| 			|  <p>Paste's id.</p>							|
+| pasteid			| 			|  <p>Paste's pasteid.</p>							|
 | order			| 			|  <p>Paste's order.</p>							|
 | name			| 			|  <p>Paste's name.</p>							|
 | category			| 			|  <p>Paste's category.</p>							|
